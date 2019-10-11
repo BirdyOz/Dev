@@ -1,0 +1,186 @@
+{
+  "Name": "Moodle finalisation settings",
+  "CreationDate": "2019-10-11",
+  "Commands": [
+    {
+      "Command": "executeScript",
+      "Target": "return document.getElementsByTagName(\"body\")[0].id",
+      "Value": "id"
+    },
+    {
+      "Command": "echo",
+      "Target": "Body ID = ${id}",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "link=Activity completion",
+      "Value": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${id}.includes (\"book\") == true",
+      "Value": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "I am a book",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=id_completion",
+      "Value": ""
+    },
+    {
+      "Command": "select",
+      "Target": "id=id_completion",
+      "Value": "label=Do not indicate activity completion"
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "finish",
+      "Value": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=id_completion",
+      "Value": ""
+    },
+    {
+      "Command": "select",
+      "Target": "id=id_completion",
+      "Value": "label=Show activity as complete when conditions are met"
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${id}.includes (\"quiz\") == true",
+      "Value": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "I am a quiz",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=id_completionusegrade",
+      "Value": "1"
+    },
+    {
+      "Command": "check",
+      "Target": "id=id_completionusegrade",
+      "Value": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${id}.includes (\"hvp\") == true",
+      "Value": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "I am a H5P",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=id_completionview",
+      "Value": "1"
+    },
+    {
+      "Command": "uncheck",
+      "Target": "id=id_completionview",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=id_completionusegrade",
+      "Value": "1"
+    },
+    {
+      "Command": "check",
+      "Target": "id=id_completionusegrade",
+      "Value": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${id}.includes (\"forum\") == true",
+      "Value": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "I am a forum",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=id_completionpostsenabled",
+      "Value": "1"
+    },
+    {
+      "Command": "check",
+      "Target": "id=id_completionpostsenabled",
+      "Value": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${id}.includes (\"assign\") == true",
+      "Value": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "I am an assignment",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=id_completionsubmit",
+      "Value": "1"
+    },
+    {
+      "Command": "check",
+      "Target": "id=id_completionsubmit",
+      "Value": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "label",
+      "Target": "finish",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=id_submitbutton",
+      "Value": ""
+    },
+    {
+      "Command": "selectWindow",
+      "Target": "tab=1",
+      "Value": ""
+    }
+  ]
+}
